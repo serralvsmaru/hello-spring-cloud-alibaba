@@ -1,0 +1,16 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: rocketmq-consumer-xtl
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 120.25.207.44:9876
+      bindings:
+        input: {destination: test-topic, content-type: application/json, group: test-group}
+        # 自定义 binding
+        myInput1: {destination: my-topic-1, content-type: application/json, group: my-binding-1}
+        myInput2: {destination: my-topic-2, content-type: application/json, group: my-binding-2}

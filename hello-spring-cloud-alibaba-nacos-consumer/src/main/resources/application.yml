@@ -1,0 +1,19 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    # 应用程序名称
+    name: nacos-consumer
+  cloud:
+    nacos:
+      discovery:
+        # 注册中心地址
+        server-addr: 120.25.207.44:8848
+
+# 健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,15 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: rocketmq-provider-xtl
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 120.25.207.44:9876
+      bindings:
+        output: {destination: test-topic, content-type: application/json}
+        myOutput1: {destination: my-topic-1, content-type: application/json}
+        myOutput2: {destination: my-topic-2, content-type: application/json}

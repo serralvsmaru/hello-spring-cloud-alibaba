@@ -1,0 +1,21 @@
+spring:
+  application:
+    # 名字必须要有，通过名字注册访问
+    name: nacos-provider
+  # nacos的地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.25.207.44:8848
+        # 可配可不配，不配就用上面的name
+        cluster-name: ${spring.application.name}
+
+server:
+  port: 8085
+
+# 健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
